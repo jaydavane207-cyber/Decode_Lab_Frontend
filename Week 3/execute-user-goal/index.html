@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Week 3 at DecodeLabs: Project 3, Interactive Web Elements — event listeners, state, and safe DOM mutation, hand-wired. Weeks 1–2 live at ?week=1 and ?week=2." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f2e7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16130e" />
+    <title>Then the Page Woke Up — Project 3: Interactive Web Elements · DecodeLabs</title>
+    <script>
+      /* set the theme before first paint — saved choice wins, else follow the OS */
+      try {
+        var t = localStorage.getItem("dl-theme");
+        if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
