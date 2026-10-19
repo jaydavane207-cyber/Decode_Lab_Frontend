@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project 1 at DecodeLabs, written up by hand: a static webpage about building static webpages — semantic HTML, a paper sitemap, Grid & Flexbox, sized images, and a flight checklist. Batch 2026." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f2e7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16130e" />
+    <title>My First Webpage, Built Slowly — Project 1 · DecodeLabs</title>
+    <script>
+      /* set the theme before first paint — saved choice wins, else follow the OS */
+      try {
+        var t = localStorage.getItem("dl-theme");
+        if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
