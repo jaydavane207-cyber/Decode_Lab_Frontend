@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Week 2 at DecodeLabs: Project 2, Responsive Web Layout — mobile-first CSS, min-width breakpoints, clamp() fluid type, an auto-fit grid, popover navigation and 44px thumbs. Week 1 lives at ?week=1." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f2e7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16130e" />
+    <title>The Page Learned to Pour — Project 2: Responsive Web Layout · DecodeLabs</title>
+    <script>
+      /* set the theme before first paint — saved choice wins, else follow the OS */
+      try {
+        var t = localStorage.getItem("dl-theme");
+        if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
